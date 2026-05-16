@@ -1,56 +1,84 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Activity, ChevronDown } from "lucide-react";
-import { useAppDispatch } from "@/store/hooks";
-import { addTask } from "@/store/slices/tasksSlice";
-import {
-  BASKET_ANOMALIES,
-  ITEM_ANOMALIES,
-  STORES,
-  type ItemAnomaly,
-} from "@/data/verticeData";
+import { ChevronDown, Loader2 } from "lucide-react";
+import { useGetCategoriesQuery } from "@/store/api/categoriesApi";
+import { type ItemAnomaly } from "@/data/verticeData";
 import { TrendModal } from "./TrendModal";
+import { CreateTaskModal } from "./CreateTaskModal";
 
 type SubTab = "basket" | "item";
 
-interface AnomaliesTabProps {
-  onSwitchToActions: () => void;
-}
-
-export function AnomaliesTab({ onSwitchToActions }: AnomaliesTabProps) {
-  const dispatch = useAppDispatch();
-  const [subTab, setSubTab] = useState<SubTab>("basket");
+export function AnomaliesTab() {
+  const [subTab, setSubTab] = useState<SubTab>("item");
   const [storeFilter, setStoreFilter] = useState<string>("All");
   const [trendItem, setTrendItem] = useState<ItemAnomaly | null>(null);
+  const [taskDesc, setTaskDesc] = useState<string | null>(null);
 
-  const storeNames = useMemo(
-    () => ["All", ...STORES.map((s) => s.name)],
-    []
-  );
+  const { data: categoriesResponse, isLoading } = useGetCategoriesQuery();
+
+  const venues = useMemo(() => {
+    return categoriesResponse?.data.flatMap((c) => c.venues) || [];
+  }, [categoriesResponse]);
+
+  const storeNames = useMemo(() => {
+    const names = Array.from(new Set(venues.map((v) => v.name)));
+    return ["All", ...names];
+  }, [venues]);
+
+  const allBasketAnomalies = useMemo(() => {
+    return venues.flatMap((v) =>
+      v.basketBodyInfo.map((b) => ({
+        id: `${v.id}-${b.id}`,
+        storeName: v.name,
+        pair: b.name,
+        globalLift: b.global,
+        localLift: b.local,
+      }))
+    );
+  }, [venues]);
+
+  const allItemAnomalies = useMemo(() => {
+    return venues.flatMap((v) =>
+      v.itemInfo.map((i) => ({
+        id: `${v.id}-${i.id}`,
+        storeName: v.name,
+        item: i.name,
+        drop: i.percent,
+        zScore: i.score.toFixed(2),
+        trend: [], // Trend not returned by this API endpoint
+      }))
+    );
+  }, [venues]);
 
   const filteredBasket = useMemo(
     () =>
       storeFilter === "All"
-        ? BASKET_ANOMALIES
-        : BASKET_ANOMALIES.filter((b) => b.storeName === storeFilter),
-    [storeFilter]
+        ? allBasketAnomalies
+        : allBasketAnomalies.filter((b) => b.storeName === storeFilter),
+    [allBasketAnomalies, storeFilter]
   );
 
   const filteredItem = useMemo(
     () =>
       storeFilter === "All"
-        ? ITEM_ANOMALIES
-        : ITEM_ANOMALIES.filter((i) => i.storeName === storeFilter),
-    [storeFilter]
+        ? allItemAnomalies
+        : allItemAnomalies.filter((i) => i.storeName === storeFilter),
+    [allItemAnomalies, storeFilter]
   );
 
-  function createTask(description: string) {
-    const title =
-      description.length > 60 ? `${description.substring(0, 60)}…` : description;
-    dispatch(addTask({ title, description }));
-    onSwitchToActions();
+  function openCreateTask(description: string) {
+    setTaskDesc(description);
   }
+
+  if (isLoading) {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <Loader2 className="size-8 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
 
   return (
     <div className="flex h-full flex-col gap-5 overflow-auto px-8 py-7">
@@ -67,8 +95,8 @@ export function AnomaliesTab({ onSwitchToActions }: AnomaliesTabProps) {
       <div className="flex items-center justify-between">
         <div className="flex gap-0.5 rounded-lg bg-muted p-[3px]">
           {[
-            { id: "basket", label: "Basket-Level" } as const,
-            { id: "item", label: "Item-Level" } as const,
+            { id: "item", label: "Item Level" } as const,
+            { id: "basket", label: "Basket Level" } as const,
           ].map((t) => (
             <button
               key={t.id}
@@ -78,8 +106,7 @@ export function AnomaliesTab({ onSwitchToActions }: AnomaliesTabProps) {
               style={{
                 background: subTab === t.id ? "var(--card)" : "transparent",
                 color: subTab === t.id ? "var(--foreground)" : "var(--muted-foreground)",
-                boxShadow:
-                  subTab === t.id ? "0 1px 4px rgba(0,0,0,0.08)" : "none",
+                boxShadow: subTab === t.id ? "0 1px 4px rgba(0,0,0,0.08)" : "none",
               }}
             >
               {t.label}
@@ -110,9 +137,52 @@ export function AnomaliesTab({ onSwitchToActions }: AnomaliesTabProps) {
       {/* Tables */}
       <div
         key={subTab}
-        className="vertice-fade-in flex-1 overflow-hidden rounded-[10px] border bg-card"
+        className="vertice-fade-in flex-1 overflow-auto rounded-[10px] border bg-card"
       >
-        {subTab === "basket" ? (
+        {subTab === "item" ? (
+          <table className="vertice-table w-full">
+            <thead>
+              <tr>
+                <th>Store Name</th>
+                <th>Item Name</th>
+                <th>% Sales Drop</th>
+                <th>Contextual Deviation Index</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredItem.map((row) => (
+                <tr key={row.id}>
+                  <td>
+                    <span className="font-semibold text-foreground">
+                      {row.storeName}
+                    </span>
+                  </td>
+                  <td>{row.item}</td>
+                  <td>
+                    <span className="vertice-tag vertice-tag-red">
+                      {row.drop}%
+                    </span>
+                  </td>
+                  <td className="font-semibold text-red-500">{row.zScore}</td>
+                  <td>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        openCreateTask(
+                          `Item anomaly: ${row.item} at ${row.storeName} — ${row.drop}% sales drop`
+                        )
+                      }
+                      className="rounded-md bg-primary px-3 py-1.5 text-[12.5px] font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                    >
+                      Create Task
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
           <table className="vertice-table w-full">
             <thead>
               <tr>
@@ -165,7 +235,7 @@ export function AnomaliesTab({ onSwitchToActions }: AnomaliesTabProps) {
                       <button
                         type="button"
                         onClick={() =>
-                          createTask(
+                          openCreateTask(
                             `Basket anomaly: ${row.pair} at ${row.storeName} — Local lift ${row.localLift} vs Global ${row.globalLift}`
                           )
                         }
@@ -179,55 +249,17 @@ export function AnomaliesTab({ onSwitchToActions }: AnomaliesTabProps) {
               })}
             </tbody>
           </table>
-        ) : (
-          <table className="vertice-table w-full">
-            <thead>
-              <tr>
-                <th>Store Name</th>
-                <th>Item Name</th>
-                <th>% Sales Drop</th>
-                <th>Z-Score</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredItem.map((row) => (
-                <tr key={row.id}>
-                  <td>
-                    <span className="font-semibold text-foreground">
-                      {row.storeName}
-                    </span>
-                  </td>
-                  <td>{row.item}</td>
-                  <td>
-                    <span className="vertice-tag vertice-tag-red">
-                      {row.drop}%
-                    </span>
-                  </td>
-                  <td className="font-semibold text-red-500">{row.zScore}</td>
-                  
-                  <td>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        createTask(
-                          `Item anomaly: ${row.item} at ${row.storeName} — ${row.drop}% sales drop`
-                        )
-                      }
-                      className="rounded-md bg-primary px-3 py-1.5 text-[12.5px] font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                    >
-                      Create Task
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         )}
       </div>
 
       {trendItem && (
         <TrendModal item={trendItem} onClose={() => setTrendItem(null)} />
+      )}
+      {taskDesc !== null && (
+        <CreateTaskModal
+          defaultDescription={taskDesc}
+          onClose={() => setTaskDesc(null)}
+        />
       )}
     </div>
   );

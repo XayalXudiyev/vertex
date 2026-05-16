@@ -14,11 +14,8 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setCenter, setZoom, setSelectedPin } from "@/store/slices/mapSlice";
-import {
-  MOCK_LOCATIONS,
-  LOCATION_TYPE_LABELS,
-  type MockLocation,
-} from "@/data/mockLocations";
+import { LOCATION_TYPE_LABELS } from "@/data/mockLocations";
+import type { Venue } from "@/store/api/categoriesApi";
 
 function createMarkerIcon(color = "#77bc20") {
   const cx = 24;
@@ -47,9 +44,7 @@ function createMarkerIcon(color = "#77bc20") {
           <polygon points="${hexPoints(innerR)}" fill="black"/>
         </mask>
       </defs>
-      <!-- Outer hexagon with inner hexagon cut out -->
       <polygon points="${hexPoints(outerR)}" fill="${color}" mask="url(#hexCutout)" filter="url(#mshadow)"/>
-      <!-- Separate arrow tip below with transparent gap -->
       <polygon points="${triPoints}" fill="${color}" filter="url(#mshadow)"/>
     </svg>`;
 
@@ -65,7 +60,6 @@ function createMarkerIcon(color = "#77bc20") {
 
 const greenIcon = createMarkerIcon("#77bc20");
 
-// ── Map controller: sync Redux state → Leaflet ──
 function MapController() {
   const map = useMap();
   const { center, zoom } = useAppSelector((s) => s.map);
@@ -87,7 +81,6 @@ function MapController() {
   return null;
 }
 
-// ── Click handler ──
 function MapClickHandler() {
   const dispatch = useAppDispatch();
 
@@ -101,24 +94,24 @@ function MapClickHandler() {
   return null;
 }
 
-// ── Props ──
 interface LeafletMapProps {
-  onLocationSelect?: (location: MockLocation) => void;
+  venues: Venue[];
+  onLocationSelect?: (venue: Venue) => void;
 }
 
-export function LeafletMap({ onLocationSelect }: LeafletMapProps) {
+export function LeafletMap({ venues = [], onLocationSelect }: LeafletMapProps) {
   const dispatch = useAppDispatch();
   const { center, zoom, selectedPin } = useAppSelector((s) => s.map);
-  const [activeMarkerId, setActiveMarkerId] = useState<string | null>(null);
+  const [activeMarkerId, setActiveMarkerId] = useState<number | null>(null);
 
-  function handleMarkerClick(loc: MockLocation) {
+  function handleMarkerClick(loc: Venue) {
     setActiveMarkerId(loc.id);
-    dispatch(setCenter([loc.lat, loc.lon]));
+    dispatch(setCenter([loc.latitude, loc.longitude]));
     dispatch(setZoom(15));
     dispatch(
       setSelectedPin({
-        lat: loc.lat,
-        lon: loc.lon,
+        lat: loc.latitude,
+        lon: loc.longitude,
         label: loc.name,
       })
     );
@@ -145,11 +138,11 @@ export function LeafletMap({ onLocationSelect }: LeafletMapProps) {
       <MapController />
       <MapClickHandler />
 
-      {/* Mock location markers */}
-      {MOCK_LOCATIONS.map((loc) => (
+      {/* Venue markers */}
+      {venues.map((loc) => (
         <Marker
           key={loc.id}
-          position={[loc.lat, loc.lon]}
+          position={[loc.latitude, loc.longitude]}
           icon={greenIcon}
           eventHandlers={{
             click: () => handleMarkerClick(loc),
@@ -164,9 +157,9 @@ export function LeafletMap({ onLocationSelect }: LeafletMapProps) {
             <div className="vertex-tooltip-inner">
               <strong>{loc.name}</strong>
               <span className="vertex-tooltip-type">
-                {LOCATION_TYPE_LABELS[loc.type]}
+                Mağaza
               </span>
-              <span className="vertex-tooltip-address">{loc.address}</span>
+              <span className="vertex-tooltip-address">{loc.latitude.toFixed(5)}, {loc.longitude.toFixed(5)}</span>
             </div>
           </Tooltip>
         </Marker>
@@ -174,8 +167,8 @@ export function LeafletMap({ onLocationSelect }: LeafletMapProps) {
 
       {/* Selected pin (from search / map click) */}
       {selectedPin &&
-        !MOCK_LOCATIONS.some(
-          (m) => m.lat === selectedPin.lat && m.lon === selectedPin.lon
+        !venues.some(
+          (m) => m.latitude === selectedPin.lat && m.longitude === selectedPin.lon
         ) && (
           <Marker
             position={[selectedPin.lat, selectedPin.lon]}

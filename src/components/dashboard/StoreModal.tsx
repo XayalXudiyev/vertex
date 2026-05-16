@@ -1,18 +1,16 @@
 "use client";
 
 import { AlertTriangle, MapPin, TrendingDown, X } from "lucide-react";
-import { STORES, storePopupData } from "@/data/verticeData";
+import type { Venue } from "@/store/api/categoriesApi";
 
 interface StoreModalProps {
-  storeId: number;
+  venue: Venue;
   onClose: () => void;
-  onCreateTask: (description: string) => void;
+  onCreateTask?: (description: string) => void;
 }
 
-export function StoreModal({ storeId, onClose, onCreateTask }: StoreModalProps) {
-  const store = STORES.find((s) => s.id === storeId);
-  if (!store) return null;
-  const data = storePopupData(storeId);
+export function StoreModal({ venue, onClose, onCreateTask }: StoreModalProps) {
+  if (!venue) return null;
 
   return (
     <div
@@ -40,7 +38,7 @@ export function StoreModal({ storeId, onClose, onCreateTask }: StoreModalProps) 
           <div className="flex items-center gap-2.5">
             <MapPin className="size-[14px]" style={{ color: "var(--primary)" }} />
             <div>
-              <div className="text-base font-bold text-white">{store.name}</div>
+              <div className="text-base font-bold text-white">{venue.name}</div>
               <div className="text-[11.5px] text-neutral-500">
                 Store Intelligence Report
               </div>
@@ -65,8 +63,11 @@ export function StoreModal({ storeId, onClose, onCreateTask }: StoreModalProps) 
               Basket Anomalies
             </div>
             <div className="flex flex-col gap-2">
-              {data.basketAnomalies.map((b) => {
-                const dropPct = ((1 - b.localLift / b.globalLift) * 100).toFixed(0);
+              {venue.basketBodyInfo.length === 0 && (
+                <div className="text-sm text-neutral-500">No anomalies found.</div>
+              )}
+              {venue.basketBodyInfo.slice(0, 5).map((b) => {
+                const dropPct = ((1 - b.local / b.global) * 100).toFixed(0);
                 return (
                   <div
                     key={b.id}
@@ -74,11 +75,11 @@ export function StoreModal({ storeId, onClose, onCreateTask }: StoreModalProps) 
                   >
                     <div>
                       <div className="text-[13px] font-semibold text-foreground">
-                        {b.pair}
+                        {b.name}
                       </div>
                       <div className="mt-0.5 text-[11.5px] text-muted-foreground">
-                        Global: <b>{b.globalLift}</b> &nbsp;|&nbsp; Local:{" "}
-                        <b className="text-red-500">{b.localLift}</b>
+                        Global: <b>{b.global}</b> &nbsp;|&nbsp; Local:{" "}
+                        <b className="text-red-500">{b.local}</b>
                       </div>
                     </div>
                     <span className="vertice-tag vertice-tag-red">↓ {dropPct}%</span>
@@ -95,26 +96,29 @@ export function StoreModal({ storeId, onClose, onCreateTask }: StoreModalProps) 
               Sales Drops
             </div>
             <div className="flex flex-col gap-2">
-              {data.salesDrops.map((item) => (
+              {venue.itemInfo.length === 0 && (
+                <div className="text-sm text-neutral-500">No items found.</div>
+              )}
+              {venue.itemInfo.slice(0, 5).map((item) => (
                 <div
                   key={item.id}
                   className="flex items-center justify-between rounded-lg border px-3 py-2.5"
                 >
                   <div>
                     <div className="text-[13px] font-semibold text-foreground">
-                      {item.item}
+                      {item.name}
                     </div>
                     <div className="mt-0.5 text-[11.5px] text-muted-foreground">
-                      Z-score: <b className="text-red-500">{item.zScore}</b>
+                      Z-score: <b className="text-red-500">{item.score.toFixed(2)}</b>
                     </div>
                   </div>
                   <div className="flex flex-col items-end gap-1.5">
-                    <span className="vertice-tag vertice-tag-red">{item.drop}%</span>
+                    <span className="vertice-tag vertice-tag-red">{item.percent}%</span>
                     <button
                       type="button"
                       onClick={() => {
-                        onCreateTask(
-                          `Sales drop: ${item.item} at ${store.name} (${item.drop}%)`
+                        onCreateTask?.(
+                          `Sales drop: ${item.name} at ${venue.name} (${item.percent}%)`
                         );
                         onClose();
                       }}

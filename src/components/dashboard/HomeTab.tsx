@@ -1,21 +1,23 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   Activity,
   AlertTriangle,
+  AlertOctagon,
   CreditCard,
   Loader2,
   ShoppingBag,
+  TrendingDown,
 } from "lucide-react";
 import { useAppDispatch } from "@/store/hooks";
-import { addTask } from "@/store/slices/tasksSlice";
 import { setCenter, setSelectedPin, setZoom } from "@/store/slices/mapSlice";
-import type { MockLocation } from "@/data/mockLocations";
-import { KPI_SUMMARY, STORES } from "@/data/verticeData";
+import { KPI_SUMMARY } from "@/data/verticeData";
 import { KPICard } from "./KPICard";
 import { StoreModal } from "./StoreModal";
+import { useGetCategoriesQuery } from "@/store/api/categoriesApi";
+import type { Venue } from "@/store/api/categoriesApi";
 
 const LeafletMap = dynamic(
   () => import("@/components/map/LeafletMap").then((m) => m.LeafletMap),
@@ -29,61 +31,56 @@ const LeafletMap = dynamic(
   }
 );
 
-interface HomeTabProps {
-  onSwitchToActions: () => void;
-}
-
-export function HomeTab({ onSwitchToActions }: HomeTabProps) {
+export function HomeTab() {
   const dispatch = useAppDispatch();
-  const [selectedStoreId, setSelectedStoreId] = useState<number | null>(null);
+  const [selectedVenue, setSelectedVenue] = useState<Venue | null>(null);
 
-  const kpis = [
+  const { data: categoriesResponse } = useGetCategoriesQuery();
+
+  const venues = useMemo(() => {
+    return categoriesResponse?.data.flatMap((c) => c.venues) || [];
+  }, [categoriesResponse]);
+
+  const kpis: { label: string; value: string | number; icon: React.ReactNode; delta: string; variant?: "primary" | "destructive" | "warning" | "success" }[] = [
     {
       label: "Total Transactions",
       value: KPI_SUMMARY.totalTransactions,
       icon: <CreditCard className="size-5" />,
       delta: "↑ 8.2% vs last week",
+      variant: "primary",
     },
     {
       label: "Basket Buddies",
       value: KPI_SUMMARY.totalBasketBuddies,
       icon: <ShoppingBag className="size-5" />,
       delta: "Active associations",
+      variant: "primary",
     },
     {
       label: "Basket Anomalies",
       value: KPI_SUMMARY.totalBasketAnomalies,
-      icon: <AlertTriangle className="size-5" />,
+      icon: <AlertOctagon className="size-5" />,
       delta: "Local < Global lift",
+      variant: "destructive",
     },
     {
       label: "Item Anomalies",
       value: KPI_SUMMARY.totalItemAnomalies,
-      icon: <Activity className="size-5" />,
+      icon: <TrendingDown className="size-5" />,
       delta: "Across all stores",
+      variant: "destructive",
     },
   ];
 
-  function handleLocationSelect(loc: MockLocation) {
-    if (loc.storeId) {
-      // Fly camera to store, but also surface the analytics modal.
-      const store = STORES.find((s) => s.id === loc.storeId);
-      if (store) {
-        dispatch(setCenter([store.lat, store.lng]));
-        dispatch(setZoom(14));
-        dispatch(
-          setSelectedPin({ lat: store.lat, lon: store.lng, label: store.name })
-        );
-      }
-      setSelectedStoreId(loc.storeId);
+  function handleLocationSelect(loc: Venue) {
+    if (loc) {
+      dispatch(setCenter([loc.latitude, loc.longitude]));
+      dispatch(setZoom(14));
+      dispatch(
+        setSelectedPin({ lat: loc.latitude, lon: loc.longitude, label: loc.name })
+      );
+      setSelectedVenue(loc);
     }
-  }
-
-  function createTask(description: string) {
-    const title =
-      description.length > 60 ? `${description.substring(0, 60)}…` : description;
-    dispatch(addTask({ title, description }));
-    onSwitchToActions();
   }
 
   return (
@@ -104,14 +101,14 @@ export function HomeTab({ onSwitchToActions }: HomeTabProps) {
       </div>
 
       <div className="min-h-[420px] flex-1 overflow-hidden rounded-[10px] border bg-card">
-        <LeafletMap onLocationSelect={handleLocationSelect} />
+        <LeafletMap venues={venues} onLocationSelect={handleLocationSelect} />
       </div>
 
-      {selectedStoreId != null && (
+      {selectedVenue != null && (
         <StoreModal
-          storeId={selectedStoreId}
-          onClose={() => setSelectedStoreId(null)}
-          onCreateTask={createTask}
+          venue={selectedVenue}
+          onClose={() => setSelectedVenue(null)}
+          // Create task functionality disabled inside StoreModal since it is disconnected from createTask function.
         />
       )}
     </div>

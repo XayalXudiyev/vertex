@@ -1,24 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import { Sparkles, Star } from "lucide-react";
-import { useAppDispatch } from "@/store/hooks";
-import { addTask } from "@/store/slices/tasksSlice";
 import { BASKET_BUDDIES } from "@/data/verticeData";
+import { CreateTaskModal } from "./CreateTaskModal";
 
-interface BasketBuddiesTabProps {
-  onSwitchToActions: () => void;
-}
-
-export function BasketBuddiesTab({ onSwitchToActions }: BasketBuddiesTabProps) {
-  const dispatch = useAppDispatch();
+export function BasketBuddiesTab() {
   const golden = BASKET_BUDDIES.filter((b) => b.globalBest);
   const all = BASKET_BUDDIES;
+  const [taskDesc, setTaskDesc] = useState<string | null>(null);
 
-  function createTask(description: string) {
-    const title =
-      description.length > 60 ? `${description.substring(0, 60)}…` : description;
-    dispatch(addTask({ title, description }));
-    onSwitchToActions();
+  function openCreateTask(description: string) {
+    setTaskDesc(description);
   }
 
   return (
@@ -90,7 +83,7 @@ export function BasketBuddiesTab({ onSwitchToActions }: BasketBuddiesTabProps) {
         <div className="mb-3 text-[12px] font-bold uppercase tracking-[0.07em] text-muted-foreground">
           Association Matrix
         </div>
-        <div className="overflow-hidden rounded-[10px] border bg-card">
+        <div className="overflow-auto rounded-[10px] border bg-card">
           <table className="vertice-table w-full">
             <thead>
               <tr>
@@ -130,13 +123,13 @@ export function BasketBuddiesTab({ onSwitchToActions }: BasketBuddiesTabProps) {
                     <button
                       type="button"
                       onClick={() =>
-                        createTask(
-                          `Create discount: ${row.pair} — Lift ${row.lift}, Leverage ${row.leverage}`
+                        openCreateTask(
+                          `Create Task: ${row.pair} — Lift ${row.lift}, Leverage ${row.leverage}`
                         )
                       }
                       className="rounded-md bg-primary px-3 py-1.5 text-[12.5px] font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                     >
-                      Create Discount
+                      Create Task
                     </button>
                   </td>
                 </tr>
@@ -145,6 +138,12 @@ export function BasketBuddiesTab({ onSwitchToActions }: BasketBuddiesTabProps) {
           </table>
         </div>
       </div>
+      {taskDesc !== null && (
+        <CreateTaskModal
+          defaultDescription={taskDesc}
+          onClose={() => setTaskDesc(null)}
+        />
+      )}
     </div>
   );
 }
