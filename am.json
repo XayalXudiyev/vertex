@@ -1,0 +1,2376 @@
+{
+  "meta": {
+    "description": "Item-level anomalies detected via Relative Rolling Z-Score",
+    "dateRange": "2026-04-01 to 2026-04-30",
+    "totalStores": 16,
+    "relationalKey": "categoryId — join to Basket-level JSON on categoryId",
+    "totalAnomalies": 200
+  },
+  "stores": {
+    "ST1001": {
+      "storeId": "ST1001",
+      "storeName": "Bravo Svetlana Məmmədova küç.",
+      "riskTier": "MEDIUM",
+      "totalAnomalies": 10,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-15",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-26"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10061",
+            "itemName": "Plastic Bag Small",
+            "storeAvgSales": 1.67,
+            "networkAvgSales": 3.53,
+            "relZScore": -3.4604
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10023100",
+            "categoryName": "PASTRY",
+            "itemId": "ITM100231",
+            "itemName": "Croissant Plain",
+            "storeAvgSales": 4.75,
+            "networkAvgSales": 5.25,
+            "relZScore": -3.5635
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100161",
+            "itemName": "Ariel Powder 3kg",
+            "storeAvgSales": 5.33,
+            "networkAvgSales": 2.73,
+            "relZScore": -3.4599
+          }
+        ],
+        "2026-04-09": [
+          {
+            "categoryId": "BR1001100",
+            "categoryName": "ALCOHOL PRODUCT",
+            "itemId": "ITM10011",
+            "itemName": "Smirnoff Vodka 0.5L",
+            "storeAvgSales": 3.0,
+            "networkAvgSales": 3.36,
+            "relZScore": -5.3179
+          },
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10052",
+            "itemName": "Pringles Original",
+            "storeAvgSales": 5.0,
+            "networkAvgSales": 4.38,
+            "relZScore": -3.5653
+          }
+        ],
+        "2026-04-10": [
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100301",
+            "itemName": "Tomato 1kg",
+            "storeAvgSales": 7.43,
+            "networkAvgSales": 7.25,
+            "relZScore": -3.6425
+          }
+        ],
+        "2026-04-15": [
+          {
+            "categoryId": "BR10020900",
+            "categoryName": "MO TEXTILE",
+            "itemId": "ITM100203",
+            "itemName": "Sports Towel",
+            "storeAvgSales": 3.14,
+            "networkAvgSales": 3.0,
+            "relZScore": -6.0519
+          }
+        ],
+        "2026-04-22": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100152",
+            "itemName": "Apple 1kg",
+            "storeAvgSales": 6.71,
+            "networkAvgSales": 6.75,
+            "relZScore": -3.435
+          }
+        ],
+        "2026-04-23": [
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100302",
+            "itemName": "Cucumber 1kg",
+            "storeAvgSales": 8.71,
+            "networkAvgSales": 7.12,
+            "relZScore": -3.9665
+          }
+        ],
+        "2026-04-26": [
+          {
+            "categoryId": "BR10019800",
+            "categoryName": "MEAT & POULTRY",
+            "itemId": "ITM100193",
+            "itemName": "Lamb Chops 1kg",
+            "storeAvgSales": 7.71,
+            "networkAvgSales": 7.81,
+            "relZScore": -4.7849
+          }
+        ]
+      }
+    },
+    "ST1002": {
+      "storeId": "ST1002",
+      "storeName": "Bravo Koroğlu m/s",
+      "riskTier": "LOW",
+      "totalAnomalies": 17,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-08",
+        "2026-04-10",
+        "2026-04-11",
+        "2026-04-14",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-23",
+        "2026-04-27"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR10017600",
+            "categoryName": "HOME CARE",
+            "itemId": "ITM100171",
+            "itemName": "Flash Cleaner",
+            "storeAvgSales": 6.67,
+            "networkAvgSales": 3.33,
+            "relZScore": -4.2026
+          },
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10032",
+            "itemName": "White Bread 500g",
+            "storeAvgSales": 15.0,
+            "networkAvgSales": 11.62,
+            "relZScore": -11.4848
+          },
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10053",
+            "itemName": "Doritos Nacho",
+            "storeAvgSales": 6.33,
+            "networkAvgSales": 5.31,
+            "relZScore": -8.4
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100303",
+            "itemName": "Pepper Mix 500g",
+            "storeAvgSales": 7.5,
+            "networkAvgSales": 7.62,
+            "relZScore": -4.1078
+          },
+          {
+            "categoryId": "BR10014300",
+            "categoryName": "FROZEN FOOD",
+            "itemId": "ITM100142",
+            "itemName": "Frozen Pizza",
+            "storeAvgSales": 4.5,
+            "networkAvgSales": 3.0,
+            "relZScore": -25.444
+          },
+          {
+            "categoryId": "BR10012100",
+            "categoryName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+            "itemId": "ITM100122",
+            "itemName": "Lipton Tea 100p",
+            "storeAvgSales": 11.0,
+            "networkAvgSales": 6.12,
+            "relZScore": -5.3631
+          }
+        ],
+        "2026-04-08": [
+          {
+            "categoryId": "BR10014300",
+            "categoryName": "FROZEN FOOD",
+            "itemId": "ITM100141",
+            "itemName": "McCain Fries 750g",
+            "storeAvgSales": 4.57,
+            "networkAvgSales": 3.85,
+            "relZScore": -4.2906
+          },
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10083",
+            "itemName": "Fresh Milk 1L",
+            "storeAvgSales": 10.71,
+            "networkAvgSales": 8.38,
+            "relZScore": -4.29
+          }
+        ],
+        "2026-04-10": [
+          {
+            "categoryId": "BR1001100",
+            "categoryName": "ALCOHOL PRODUCT",
+            "itemId": "ITM10013",
+            "itemName": "Efes Beer 0.5L",
+            "storeAvgSales": 5.29,
+            "networkAvgSales": 3.06,
+            "relZScore": -4.9938
+          }
+        ],
+        "2026-04-11": [
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100272",
+            "itemName": "Pepsi 1.5L",
+            "storeAvgSales": 8.57,
+            "networkAvgSales": 7.06,
+            "relZScore": -4.0754
+          }
+        ],
+        "2026-04-14": [
+          {
+            "categoryId": "BR10031900",
+            "categoryName": "FRESH & SMOKED FISH",
+            "itemId": "ITM100311",
+            "itemName": "Salmon Fillet",
+            "storeAvgSales": 3.43,
+            "networkAvgSales": 4.19,
+            "relZScore": -3.3999
+          }
+        ],
+        "2026-04-20": [
+          {
+            "categoryId": "BR10011000",
+            "categoryName": "EGGS",
+            "itemId": "ITM100103",
+            "itemName": "Quail Eggs 20pcs",
+            "storeAvgSales": 6.86,
+            "networkAvgSales": 4.0,
+            "relZScore": -3.9996
+          }
+        ],
+        "2026-04-21": [
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100161",
+            "itemName": "Ariel Powder 3kg",
+            "storeAvgSales": 3.71,
+            "networkAvgSales": 3.14,
+            "relZScore": -3.5039
+          },
+          {
+            "categoryId": "BR10013200",
+            "categoryName": "FOOD CUPBOARD - SAVOURY",
+            "itemId": "ITM100133",
+            "itemName": "Pasta Barilla",
+            "storeAvgSales": 7.43,
+            "networkAvgSales": 5.44,
+            "relZScore": -3.5341
+          },
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100271",
+            "itemName": "Coca-Cola 2L",
+            "storeAvgSales": 13.43,
+            "networkAvgSales": 8.75,
+            "relZScore": -3.5253
+          }
+        ],
+        "2026-04-23": [
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100273",
+            "itemName": "Red Bull 250ml",
+            "storeAvgSales": 11.29,
+            "networkAvgSales": 7.31,
+            "relZScore": -5.0291
+          }
+        ],
+        "2026-04-27": [
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10052",
+            "itemName": "Pringles Original",
+            "storeAvgSales": 7.14,
+            "networkAvgSales": 4.62,
+            "relZScore": -3.6873
+          }
+        ]
+      }
+    },
+    "ST1003": {
+      "storeId": "ST1003",
+      "storeName": "Bravo Nəsib bəy Yusifbəyli küç.",
+      "riskTier": "MEDIUM",
+      "totalAnomalies": 9,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-08",
+        "2026-04-14",
+        "2026-04-25"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR1002200",
+            "categoryName": "BABY PRODUCTS",
+            "itemId": "ITM10021",
+            "itemName": "Pampers Diapers S3",
+            "storeAvgSales": 4.67,
+            "networkAvgSales": 3.64,
+            "relZScore": -6.1034
+          },
+          {
+            "categoryId": "BR10024200",
+            "categoryName": "PERSONAL CARE & COSMETICS",
+            "itemId": "ITM100242",
+            "itemName": "Colgate 75ml",
+            "storeAvgSales": 3.0,
+            "networkAvgSales": 3.53,
+            "relZScore": -4.6781
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100153",
+            "itemName": "Orange Juice 1L",
+            "storeAvgSales": 7.75,
+            "networkAvgSales": 5.06,
+            "relZScore": -3.9597
+          },
+          {
+            "categoryId": "BR1002200",
+            "categoryName": "BABY PRODUCTS",
+            "itemId": "ITM10023",
+            "itemName": "Johnson Baby Shampoo",
+            "storeAvgSales": 3.33,
+            "networkAvgSales": 2.8,
+            "relZScore": -3.8182
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100301",
+            "itemName": "Tomato 1kg",
+            "storeAvgSales": 9.8,
+            "networkAvgSales": 8.31,
+            "relZScore": -3.5275
+          }
+        ],
+        "2026-04-08": [
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10033",
+            "itemName": "Whole Wheat Bread",
+            "storeAvgSales": 12.0,
+            "networkAvgSales": 10.5,
+            "relZScore": -4.9694
+          }
+        ],
+        "2026-04-14": [
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10051",
+            "itemName": "Lays Classic 150g",
+            "storeAvgSales": 5.57,
+            "networkAvgSales": 5.56,
+            "relZScore": -5.4894
+          },
+          {
+            "categoryId": "BR10022000",
+            "categoryName": "PACKAGED CONFECTIONERY",
+            "itemId": "ITM100221",
+            "itemName": "Snickers 50g",
+            "storeAvgSales": 5.43,
+            "networkAvgSales": 6.38,
+            "relZScore": -4.8025
+          }
+        ],
+        "2026-04-25": [
+          {
+            "categoryId": "BR10028600",
+            "categoryName": "TEXTILE",
+            "itemId": "ITM100281",
+            "itemName": "Beach Towel",
+            "storeAvgSales": 4.43,
+            "networkAvgSales": 3.13,
+            "relZScore": -4.4242
+          }
+        ]
+      }
+    },
+    "ST1004": {
+      "storeId": "ST1004",
+      "storeName": "Bravo Hövsan",
+      "riskTier": "HIGH",
+      "totalAnomalies": 11,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-11",
+        "2026-04-24",
+        "2026-04-25",
+        "2026-04-30"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100163",
+            "itemName": "Domestos 750ml",
+            "storeAvgSales": 4.0,
+            "networkAvgSales": 3.13,
+            "relZScore": -15.755
+          },
+          {
+            "categoryId": "BR10013200",
+            "categoryName": "FOOD CUPBOARD - SAVOURY",
+            "itemId": "ITM100133",
+            "itemName": "Pasta Barilla",
+            "storeAvgSales": 6.33,
+            "networkAvgSales": 4.56,
+            "relZScore": -6.4042
+          },
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10063",
+            "itemName": "Eco Bag",
+            "storeAvgSales": 3.33,
+            "networkAvgSales": 3.0,
+            "relZScore": -4.0469
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100151",
+            "itemName": "Banana 1kg",
+            "storeAvgSales": 7.75,
+            "networkAvgSales": 5.44,
+            "relZScore": -4.5311
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR10014300",
+            "categoryName": "FROZEN FOOD",
+            "itemId": "ITM100141",
+            "itemName": "McCain Fries 750g",
+            "storeAvgSales": 3.4,
+            "networkAvgSales": 3.33,
+            "relZScore": -5.2381
+          }
+        ],
+        "2026-04-07": [
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100161",
+            "itemName": "Ariel Powder 3kg",
+            "storeAvgSales": 2.5,
+            "networkAvgSales": 2.93,
+            "relZScore": -4.7581
+          },
+          {
+            "categoryId": "BR10026400",
+            "categoryName": "SMALL ELECTRICAL APPLIANCES",
+            "itemId": "ITM100262",
+            "itemName": "Tefal Iron",
+            "storeAvgSales": 3.5,
+            "networkAvgSales": 2.86,
+            "relZScore": -4.7183
+          }
+        ],
+        "2026-04-11": [
+          {
+            "categoryId": "BR10011000",
+            "categoryName": "EGGS",
+            "itemId": "ITM100103",
+            "itemName": "Quail Eggs 20pcs",
+            "storeAvgSales": 6.57,
+            "networkAvgSales": 5.5,
+            "relZScore": -4.8714
+          }
+        ],
+        "2026-04-24": [
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10053",
+            "itemName": "Doritos Nacho",
+            "storeAvgSales": 5.14,
+            "networkAvgSales": 4.69,
+            "relZScore": -3.7299
+          }
+        ],
+        "2026-04-25": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100153",
+            "itemName": "Orange Juice 1L",
+            "storeAvgSales": 6.14,
+            "networkAvgSales": 6.64,
+            "relZScore": -3.6398
+          }
+        ],
+        "2026-04-30": [
+          {
+            "categoryId": "BR10012100",
+            "categoryName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+            "itemId": "ITM100123",
+            "itemName": "Quaker Oats 500g",
+            "storeAvgSales": 7.71,
+            "networkAvgSales": 8.62,
+            "relZScore": -3.7067
+          }
+        ]
+      }
+    },
+    "ST1005": {
+      "storeId": "ST1005",
+      "storeName": "Bravo Lökbatan",
+      "riskTier": "LOW",
+      "totalAnomalies": 8,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-12",
+        "2026-04-19",
+        "2026-04-22"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR1002200",
+            "categoryName": "BABY PRODUCTS",
+            "itemId": "ITM10023",
+            "itemName": "Johnson Baby Shampoo",
+            "storeAvgSales": 3.67,
+            "networkAvgSales": 2.56,
+            "relZScore": -8.9684
+          },
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100303",
+            "itemName": "Pepper Mix 500g",
+            "storeAvgSales": 7.67,
+            "networkAvgSales": 6.94,
+            "relZScore": -4.1189
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10082",
+            "itemName": "Activia Yogurt",
+            "storeAvgSales": 6.75,
+            "networkAvgSales": 7.88,
+            "relZScore": -6.8023
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR10022000",
+            "categoryName": "PACKAGED CONFECTIONERY",
+            "itemId": "ITM100223",
+            "itemName": "Milka 100g",
+            "storeAvgSales": 5.6,
+            "networkAvgSales": 5.5,
+            "relZScore": -4.0776
+          }
+        ],
+        "2026-04-07": [
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10051",
+            "itemName": "Lays Classic 150g",
+            "storeAvgSales": 4.4,
+            "networkAvgSales": 5.06,
+            "relZScore": -4.3019
+          }
+        ],
+        "2026-04-12": [
+          {
+            "categoryId": "BR10023100",
+            "categoryName": "PASTRY",
+            "itemId": "ITM100233",
+            "itemName": "Donut Sugar",
+            "storeAvgSales": 5.14,
+            "networkAvgSales": 4.44,
+            "relZScore": -4.7249
+          }
+        ],
+        "2026-04-19": [
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100161",
+            "itemName": "Ariel Powder 3kg",
+            "storeAvgSales": 2.86,
+            "networkAvgSales": 3.12,
+            "relZScore": -4.8962
+          }
+        ],
+        "2026-04-22": [
+          {
+            "categoryId": "BR10017600",
+            "categoryName": "HOME CARE",
+            "itemId": "ITM100172",
+            "itemName": "Pledge Spray",
+            "storeAvgSales": 3.71,
+            "networkAvgSales": 2.86,
+            "relZScore": -4.85
+          }
+        ]
+      }
+    },
+    "ST1006": {
+      "storeId": "ST1006",
+      "storeName": "Bravo Sumqayıt Dəmiryol st.",
+      "riskTier": "MEDIUM",
+      "totalAnomalies": 14,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-18",
+        "2026-04-21",
+        "2026-04-25"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10081",
+            "itemName": "Danone Yogurt 400g",
+            "storeAvgSales": 7.67,
+            "networkAvgSales": 8.0,
+            "relZScore": -8.8141
+          },
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100272",
+            "itemName": "Pepsi 1.5L",
+            "storeAvgSales": 6.0,
+            "networkAvgSales": 8.31,
+            "relZScore": -3.5945
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10023100",
+            "categoryName": "PASTRY",
+            "itemId": "ITM100231",
+            "itemName": "Croissant Plain",
+            "storeAvgSales": 5.25,
+            "networkAvgSales": 5.25,
+            "relZScore": -11.6847
+          },
+          {
+            "categoryId": "BR1007700",
+            "categoryName": "DAIRY LONG LIFE",
+            "itemId": "ITM10072",
+            "itemName": "UHT Cream 200ml",
+            "storeAvgSales": 4.25,
+            "networkAvgSales": 6.19,
+            "relZScore": -5.7758
+          },
+          {
+            "categoryId": "BR10029700",
+            "categoryName": "TOBACCO PRODUCTS",
+            "itemId": "ITM100293",
+            "itemName": "Parliament",
+            "storeAvgSales": 4.0,
+            "networkAvgSales": 3.44,
+            "relZScore": -5.7534
+          },
+          {
+            "categoryId": "BR1001100",
+            "categoryName": "ALCOHOL PRODUCT",
+            "itemId": "ITM10013",
+            "itemName": "Efes Beer 0.5L",
+            "storeAvgSales": 5.25,
+            "networkAvgSales": 2.88,
+            "relZScore": -4.5596
+          },
+          {
+            "categoryId": "BR10020900",
+            "categoryName": "MO TEXTILE",
+            "itemId": "ITM100203",
+            "itemName": "Sports Towel",
+            "storeAvgSales": 4.33,
+            "networkAvgSales": 2.56,
+            "relZScore": -4.2489
+          },
+          {
+            "categoryId": "BR10012100",
+            "categoryName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+            "itemId": "ITM100122",
+            "itemName": "Lipton Tea 100p",
+            "storeAvgSales": 7.0,
+            "networkAvgSales": 6.12,
+            "relZScore": -4.1107
+          }
+        ],
+        "2026-04-14": [
+          {
+            "categoryId": "BR10031900",
+            "categoryName": "FRESH & SMOKED FISH",
+            "itemId": "ITM100311",
+            "itemName": "Salmon Fillet",
+            "storeAvgSales": 3.43,
+            "networkAvgSales": 4.19,
+            "relZScore": -3.4017
+          }
+        ],
+        "2026-04-15": [
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10033",
+            "itemName": "Whole Wheat Bread",
+            "storeAvgSales": 9.57,
+            "networkAvgSales": 10.0,
+            "relZScore": -3.5071
+          }
+        ],
+        "2026-04-18": [
+          {
+            "categoryId": "BR10011000",
+            "categoryName": "EGGS",
+            "itemId": "ITM100103",
+            "itemName": "Quail Eggs 20pcs",
+            "storeAvgSales": 4.71,
+            "networkAvgSales": 5.88,
+            "relZScore": -4.4448
+          }
+        ],
+        "2026-04-21": [
+          {
+            "categoryId": "BR1009900",
+            "categoryName": "DELIKATESSEN",
+            "itemId": "ITM10091",
+            "itemName": "Smoked Sausage",
+            "storeAvgSales": 1.86,
+            "networkAvgSales": 3.47,
+            "relZScore": -3.444
+          }
+        ],
+        "2026-04-25": [
+          {
+            "categoryId": "BR10013200",
+            "categoryName": "FOOD CUPBOARD - SAVOURY",
+            "itemId": "ITM100133",
+            "itemName": "Pasta Barilla",
+            "storeAvgSales": 5.57,
+            "networkAvgSales": 4.88,
+            "relZScore": -3.7763
+          },
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10031",
+            "itemName": "Lavash Bread",
+            "storeAvgSales": 9.0,
+            "networkAvgSales": 9.62,
+            "relZScore": -3.587
+          }
+        ]
+      }
+    },
+    "ST1007": {
+      "storeId": "ST1007",
+      "storeName": "Bravo Xırdalan -2",
+      "riskTier": "LOW",
+      "totalAnomalies": 15,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-08",
+        "2026-04-11",
+        "2026-04-15",
+        "2026-04-17",
+        "2026-04-18",
+        "2026-04-23",
+        "2026-04-26",
+        "2026-04-27"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10052",
+            "itemName": "Pringles Original",
+            "storeAvgSales": 6.33,
+            "networkAvgSales": 5.5,
+            "relZScore": -27.1839
+          },
+          {
+            "categoryId": "BR10018700",
+            "categoryName": "LIGHT HOUSE HOLD",
+            "itemId": "ITM100183",
+            "itemName": "Cling Film",
+            "storeAvgSales": 3.33,
+            "networkAvgSales": 4.07,
+            "relZScore": -3.5849
+          },
+          {
+            "categoryId": "BR10017600",
+            "categoryName": "HOME CARE",
+            "itemId": "ITM100171",
+            "itemName": "Flash Cleaner",
+            "storeAvgSales": 3.33,
+            "networkAvgSales": 3.33,
+            "relZScore": -3.5031
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10061",
+            "itemName": "Plastic Bag Small",
+            "storeAvgSales": 4.67,
+            "networkAvgSales": 2.67,
+            "relZScore": -5.9561
+          },
+          {
+            "categoryId": "BR10029700",
+            "categoryName": "TOBACCO PRODUCTS",
+            "itemId": "ITM100291",
+            "itemName": "Marlboro Red",
+            "storeAvgSales": 3.67,
+            "networkAvgSales": 3.12,
+            "relZScore": -4.4937
+          },
+          {
+            "categoryId": "BR1007700",
+            "categoryName": "DAIRY LONG LIFE",
+            "itemId": "ITM10072",
+            "itemName": "UHT Cream 200ml",
+            "storeAvgSales": 5.75,
+            "networkAvgSales": 6.19,
+            "relZScore": -3.799
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR10014300",
+            "categoryName": "FROZEN FOOD",
+            "itemId": "ITM100142",
+            "itemName": "Frozen Pizza",
+            "storeAvgSales": 3.2,
+            "networkAvgSales": 3.38,
+            "relZScore": -4.0188
+          }
+        ],
+        "2026-04-08": [
+          {
+            "categoryId": "BR10013200",
+            "categoryName": "FOOD CUPBOARD - SAVOURY",
+            "itemId": "ITM100132",
+            "itemName": "Hellmann Mayo",
+            "storeAvgSales": 5.14,
+            "networkAvgSales": 6.79,
+            "relZScore": -4.3429
+          }
+        ],
+        "2026-04-11": [
+          {
+            "categoryId": "BR1001100",
+            "categoryName": "ALCOHOL PRODUCT",
+            "itemId": "ITM10011",
+            "itemName": "Smirnoff Vodka 0.5L",
+            "storeAvgSales": 2.29,
+            "networkAvgSales": 4.54,
+            "relZScore": -3.8087
+          }
+        ],
+        "2026-04-15": [
+          {
+            "categoryId": "BR10020900",
+            "categoryName": "MO TEXTILE",
+            "itemId": "ITM100202",
+            "itemName": "Underwear Set",
+            "storeAvgSales": 4.57,
+            "networkAvgSales": 3.07,
+            "relZScore": -3.8071
+          }
+        ],
+        "2026-04-17": [
+          {
+            "categoryId": "BR1007700",
+            "categoryName": "DAIRY LONG LIFE",
+            "itemId": "ITM10071",
+            "itemName": "Parmalat Milk 1L",
+            "storeAvgSales": 6.71,
+            "networkAvgSales": 5.31,
+            "relZScore": -3.5846
+          }
+        ],
+        "2026-04-18": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10063",
+            "itemName": "Eco Bag",
+            "storeAvgSales": 3.57,
+            "networkAvgSales": 2.56,
+            "relZScore": -3.6715
+          }
+        ],
+        "2026-04-23": [
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100163",
+            "itemName": "Domestos 750ml",
+            "storeAvgSales": 3.29,
+            "networkAvgSales": 3.75,
+            "relZScore": -3.4903
+          }
+        ],
+        "2026-04-26": [
+          {
+            "categoryId": "BR10029700",
+            "categoryName": "TOBACCO PRODUCTS",
+            "itemId": "ITM100292",
+            "itemName": "Winston Blue",
+            "storeAvgSales": 2.71,
+            "networkAvgSales": 3.93,
+            "relZScore": -4.4937
+          }
+        ],
+        "2026-04-27": [
+          {
+            "categoryId": "BR1002200",
+            "categoryName": "BABY PRODUCTS",
+            "itemId": "ITM10022",
+            "itemName": "Nan Baby Formula",
+            "storeAvgSales": 3.71,
+            "networkAvgSales": 4.0,
+            "relZScore": -3.9816
+          }
+        ]
+      }
+    },
+    "ST1008": {
+      "storeId": "ST1008",
+      "storeName": "Bravo Sabunçu",
+      "riskTier": "HIGH",
+      "totalAnomalies": 11,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-11",
+        "2026-04-20",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-26"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10031",
+            "itemName": "Lavash Bread",
+            "storeAvgSales": 8.33,
+            "networkAvgSales": 9.44,
+            "relZScore": -5.2127
+          },
+          {
+            "categoryId": "BR10019800",
+            "categoryName": "MEAT & POULTRY",
+            "itemId": "ITM100193",
+            "itemName": "Lamb Chops 1kg",
+            "storeAvgSales": 11.0,
+            "networkAvgSales": 8.0,
+            "relZScore": -4.3709
+          },
+          {
+            "categoryId": "BR10018700",
+            "categoryName": "LIGHT HOUSE HOLD",
+            "itemId": "ITM100182",
+            "itemName": "Foil Roll",
+            "storeAvgSales": 2.67,
+            "networkAvgSales": 3.06,
+            "relZScore": -3.8105
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10028600",
+            "categoryName": "TEXTILE",
+            "itemId": "ITM100282",
+            "itemName": "Bed Sheet Set",
+            "storeAvgSales": 4.5,
+            "networkAvgSales": 3.44,
+            "relZScore": -3.6591
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR1001100",
+            "categoryName": "ALCOHOL PRODUCT",
+            "itemId": "ITM10013",
+            "itemName": "Efes Beer 0.5L",
+            "storeAvgSales": 2.25,
+            "networkAvgSales": 3.31,
+            "relZScore": -7.3027
+          }
+        ],
+        "2026-04-11": [
+          {
+            "categoryId": "BR10025300",
+            "categoryName": "PET FOOD",
+            "itemId": "ITM100252",
+            "itemName": "Pedigree Dog Food",
+            "storeAvgSales": 3.57,
+            "networkAvgSales": 3.25,
+            "relZScore": -4.1737
+          }
+        ],
+        "2026-04-20": [
+          {
+            "categoryId": "BR10023100",
+            "categoryName": "PASTRY",
+            "itemId": "ITM100232",
+            "itemName": "Danish Pastry",
+            "storeAvgSales": 4.71,
+            "networkAvgSales": 4.81,
+            "relZScore": -7.746
+          }
+        ],
+        "2026-04-22": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10061",
+            "itemName": "Plastic Bag Small",
+            "storeAvgSales": 2.57,
+            "networkAvgSales": 3.69,
+            "relZScore": -4.0025
+          },
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100273",
+            "itemName": "Red Bull 250ml",
+            "storeAvgSales": 8.57,
+            "networkAvgSales": 8.81,
+            "relZScore": -3.585
+          }
+        ],
+        "2026-04-23": [
+          {
+            "categoryId": "BR10012100",
+            "categoryName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+            "itemId": "ITM100123",
+            "itemName": "Quaker Oats 500g",
+            "storeAvgSales": 6.71,
+            "networkAvgSales": 8.62,
+            "relZScore": -3.3971
+          }
+        ],
+        "2026-04-26": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10062",
+            "itemName": "Plastic Bag Large",
+            "storeAvgSales": 3.29,
+            "networkAvgSales": 3.15,
+            "relZScore": -4.3435
+          }
+        ]
+      }
+    },
+    "ST1009": {
+      "storeId": "ST1009",
+      "storeName": "Bravo Mərdəkan şossesi",
+      "riskTier": "LOW",
+      "totalAnomalies": 10,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-09",
+        "2026-04-13",
+        "2026-04-24",
+        "2026-04-30"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100153",
+            "itemName": "Orange Juice 1L",
+            "storeAvgSales": 6.0,
+            "networkAvgSales": 4.94,
+            "relZScore": -7.4379
+          },
+          {
+            "categoryId": "BR10023100",
+            "categoryName": "PASTRY",
+            "itemId": "ITM100233",
+            "itemName": "Donut Sugar",
+            "storeAvgSales": 5.67,
+            "networkAvgSales": 5.8,
+            "relZScore": -6.1927
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10053",
+            "itemName": "Doritos Nacho",
+            "storeAvgSales": 4.25,
+            "networkAvgSales": 5.13,
+            "relZScore": -5.0639
+          },
+          {
+            "categoryId": "BR10014300",
+            "categoryName": "FROZEN FOOD",
+            "itemId": "ITM100141",
+            "itemName": "McCain Fries 750g",
+            "storeAvgSales": 4.67,
+            "networkAvgSales": 2.81,
+            "relZScore": -4.1409
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10062",
+            "itemName": "Plastic Bag Large",
+            "storeAvgSales": 2.75,
+            "networkAvgSales": 3.53,
+            "relZScore": -8.5754
+          }
+        ],
+        "2026-04-09": [
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100272",
+            "itemName": "Pepsi 1.5L",
+            "storeAvgSales": 9.86,
+            "networkAvgSales": 6.81,
+            "relZScore": -4.4141
+          }
+        ],
+        "2026-04-13": [
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10083",
+            "itemName": "Fresh Milk 1L",
+            "storeAvgSales": 5.57,
+            "networkAvgSales": 8.19,
+            "relZScore": -5.7305
+          },
+          {
+            "categoryId": "BR1009900",
+            "categoryName": "DELIKATESSEN",
+            "itemId": "ITM10091",
+            "itemName": "Smoked Sausage",
+            "storeAvgSales": 3.43,
+            "networkAvgSales": 2.67,
+            "relZScore": -3.64
+          }
+        ],
+        "2026-04-24": [
+          {
+            "categoryId": "BR10031900",
+            "categoryName": "FRESH & SMOKED FISH",
+            "itemId": "ITM100311",
+            "itemName": "Salmon Fillet",
+            "storeAvgSales": 3.57,
+            "networkAvgSales": 3.0,
+            "relZScore": -4.1871
+          }
+        ],
+        "2026-04-30": [
+          {
+            "categoryId": "BR10011000",
+            "categoryName": "EGGS",
+            "itemId": "ITM100102",
+            "itemName": "Eggs 6pcs",
+            "storeAvgSales": 5.71,
+            "networkAvgSales": 6.0,
+            "relZScore": -3.9769
+          }
+        ]
+      }
+    },
+    "ST1010": {
+      "storeId": "ST1010",
+      "storeName": "Bravo 8 Noyabr pr.",
+      "riskTier": "MEDIUM",
+      "totalAnomalies": 15,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-11",
+        "2026-04-15",
+        "2026-04-24",
+        "2026-04-29"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR10023100",
+            "categoryName": "PASTRY",
+            "itemId": "ITM100231",
+            "itemName": "Croissant Plain",
+            "storeAvgSales": 11.0,
+            "networkAvgSales": 5.81,
+            "relZScore": -24.6781
+          },
+          {
+            "categoryId": "BR1007700",
+            "categoryName": "DAIRY LONG LIFE",
+            "itemId": "ITM10071",
+            "itemName": "Parmalat Milk 1L",
+            "storeAvgSales": 8.67,
+            "networkAvgSales": 4.8,
+            "relZScore": -24.4921
+          },
+          {
+            "categoryId": "BR10031900",
+            "categoryName": "FRESH & SMOKED FISH",
+            "itemId": "ITM100311",
+            "itemName": "Salmon Fillet",
+            "storeAvgSales": 6.67,
+            "networkAvgSales": 3.19,
+            "relZScore": -13.0161
+          },
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10051",
+            "itemName": "Lays Classic 150g",
+            "storeAvgSales": 6.33,
+            "networkAvgSales": 6.06,
+            "relZScore": -7.7994
+          },
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100302",
+            "itemName": "Cucumber 1kg",
+            "storeAvgSales": 10.33,
+            "networkAvgSales": 7.62,
+            "relZScore": -7.7994
+          },
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100273",
+            "itemName": "Red Bull 250ml",
+            "storeAvgSales": 10.67,
+            "networkAvgSales": 7.88,
+            "relZScore": -4.6857
+          },
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10082",
+            "itemName": "Activia Yogurt",
+            "storeAvgSales": 11.67,
+            "networkAvgSales": 7.62,
+            "relZScore": -3.7827
+          },
+          {
+            "categoryId": "BR1001100",
+            "categoryName": "ALCOHOL PRODUCT",
+            "itemId": "ITM10012",
+            "itemName": "Xan Wine Red 0.75L",
+            "storeAvgSales": 4.0,
+            "networkAvgSales": 3.21,
+            "relZScore": -3.7273
+          },
+          {
+            "categoryId": "BR10011000",
+            "categoryName": "EGGS",
+            "itemId": "ITM100101",
+            "itemName": "Eggs 10pcs",
+            "storeAvgSales": 6.0,
+            "networkAvgSales": 6.56,
+            "relZScore": -3.6537
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100161",
+            "itemName": "Ariel Powder 3kg",
+            "storeAvgSales": 4.25,
+            "networkAvgSales": 3.14,
+            "relZScore": -3.5857
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10031",
+            "itemName": "Lavash Bread",
+            "storeAvgSales": 12.2,
+            "networkAvgSales": 10.88,
+            "relZScore": -3.4697
+          }
+        ],
+        "2026-04-11": [
+          {
+            "categoryId": "BR10022000",
+            "categoryName": "PACKAGED CONFECTIONERY",
+            "itemId": "ITM100222",
+            "itemName": "KitKat 4F",
+            "storeAvgSales": 8.29,
+            "networkAvgSales": 5.56,
+            "relZScore": -3.4584
+          }
+        ],
+        "2026-04-15": [
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100301",
+            "itemName": "Tomato 1kg",
+            "storeAvgSales": 9.14,
+            "networkAvgSales": 7.94,
+            "relZScore": -3.9621
+          }
+        ],
+        "2026-04-24": [
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100272",
+            "itemName": "Pepsi 1.5L",
+            "storeAvgSales": 8.86,
+            "networkAvgSales": 8.12,
+            "relZScore": -5.6562
+          }
+        ],
+        "2026-04-29": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10062",
+            "itemName": "Plastic Bag Large",
+            "storeAvgSales": 5.43,
+            "networkAvgSales": 3.06,
+            "relZScore": -6.5386
+          }
+        ]
+      }
+    },
+    "ST1011": {
+      "storeId": "ST1011",
+      "storeName": "Bravo Gəncə pr.",
+      "riskTier": "LOW",
+      "totalAnomalies": 14,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-10",
+        "2026-04-14",
+        "2026-04-23",
+        "2026-04-29"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10053",
+            "itemName": "Doritos Nacho",
+            "storeAvgSales": 6.33,
+            "networkAvgSales": 5.31,
+            "relZScore": -14.8
+          },
+          {
+            "categoryId": "BR10031900",
+            "categoryName": "FRESH & SMOKED FISH",
+            "itemId": "ITM100312",
+            "itemName": "Smoked Trout",
+            "storeAvgSales": 3.0,
+            "networkAvgSales": 3.94,
+            "relZScore": -8.4953
+          },
+          {
+            "categoryId": "BR10011000",
+            "categoryName": "EGGS",
+            "itemId": "ITM100101",
+            "itemName": "Eggs 10pcs",
+            "storeAvgSales": 4.67,
+            "networkAvgSales": 6.56,
+            "relZScore": -6.2308
+          },
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10033",
+            "itemName": "Whole Wheat Bread",
+            "storeAvgSales": 9.33,
+            "networkAvgSales": 10.0,
+            "relZScore": -5.49
+          },
+          {
+            "categoryId": "BR10018700",
+            "categoryName": "LIGHT HOUSE HOLD",
+            "itemId": "ITM100183",
+            "itemName": "Cling Film",
+            "storeAvgSales": 3.0,
+            "networkAvgSales": 4.07,
+            "relZScore": -5.3303
+          },
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100303",
+            "itemName": "Pepper Mix 500g",
+            "storeAvgSales": 6.33,
+            "networkAvgSales": 6.94,
+            "relZScore": -4.3324
+          },
+          {
+            "categoryId": "BR10014300",
+            "categoryName": "FROZEN FOOD",
+            "itemId": "ITM100143",
+            "itemName": "Ice Cream 1L",
+            "storeAvgSales": 2.0,
+            "networkAvgSales": 3.5,
+            "relZScore": -4.1884
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100271",
+            "itemName": "Coca-Cola 2L",
+            "storeAvgSales": 7.0,
+            "networkAvgSales": 8.19,
+            "relZScore": -7.5459
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100302",
+            "itemName": "Cucumber 1kg",
+            "storeAvgSales": 5.4,
+            "networkAvgSales": 8.94,
+            "relZScore": -9.7792
+          },
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100152",
+            "itemName": "Apple 1kg",
+            "storeAvgSales": 3.2,
+            "networkAvgSales": 5.12,
+            "relZScore": -6.0931
+          }
+        ],
+        "2026-04-10": [
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10081",
+            "itemName": "Danone Yogurt 400g",
+            "storeAvgSales": 5.57,
+            "networkAvgSales": 7.62,
+            "relZScore": -5.9129
+          }
+        ],
+        "2026-04-14": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100151",
+            "itemName": "Banana 1kg",
+            "storeAvgSales": 4.43,
+            "networkAvgSales": 4.5,
+            "relZScore": -6.3309
+          }
+        ],
+        "2026-04-23": [
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10032",
+            "itemName": "White Bread 500g",
+            "storeAvgSales": 7.29,
+            "networkAvgSales": 8.44,
+            "relZScore": -3.8028
+          }
+        ],
+        "2026-04-29": [
+          {
+            "categoryId": "BR10013200",
+            "categoryName": "FOOD CUPBOARD - SAVOURY",
+            "itemId": "ITM100131",
+            "itemName": "Heinz Ketchup",
+            "storeAvgSales": 4.43,
+            "networkAvgSales": 5.88,
+            "relZScore": -3.8762
+          }
+        ]
+      }
+    },
+    "ST1012": {
+      "storeId": "ST1012",
+      "storeName": "Bravo- City Park Mall",
+      "riskTier": "HIGH",
+      "totalAnomalies": 13,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-12",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-18",
+        "2026-04-22",
+        "2026-04-28"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR10019800",
+            "categoryName": "MEAT & POULTRY",
+            "itemId": "ITM100192",
+            "itemName": "Beef Mince 500g",
+            "storeAvgSales": 7.33,
+            "networkAvgSales": 8.12,
+            "relZScore": -11.094
+          },
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10031",
+            "itemName": "Lavash Bread",
+            "storeAvgSales": 10.33,
+            "networkAvgSales": 9.44,
+            "relZScore": -5.2127
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10032",
+            "itemName": "White Bread 500g",
+            "storeAvgSales": 9.5,
+            "networkAvgSales": 8.44,
+            "relZScore": -8.3434
+          },
+          {
+            "categoryId": "BR10029700",
+            "categoryName": "TOBACCO PRODUCTS",
+            "itemId": "ITM100292",
+            "itemName": "Winston Blue",
+            "storeAvgSales": 4.5,
+            "networkAvgSales": 3.21,
+            "relZScore": -5.3066
+          }
+        ],
+        "2026-04-12": [
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10053",
+            "itemName": "Doritos Nacho",
+            "storeAvgSales": 5.57,
+            "networkAvgSales": 6.12,
+            "relZScore": -4.6628
+          },
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100272",
+            "itemName": "Pepsi 1.5L",
+            "storeAvgSales": 6.57,
+            "networkAvgSales": 7.69,
+            "relZScore": -4.487
+          },
+          {
+            "categoryId": "BR1002200",
+            "categoryName": "BABY PRODUCTS",
+            "itemId": "ITM10021",
+            "itemName": "Pampers Diapers S3",
+            "storeAvgSales": 4.0,
+            "networkAvgSales": 3.12,
+            "relZScore": -3.6689
+          }
+        ],
+        "2026-04-14": [
+          {
+            "categoryId": "BR1004400",
+            "categoryName": "BULK CONFECTIONERY",
+            "itemId": "ITM10043",
+            "itemName": "Bulk Lollipops",
+            "storeAvgSales": 3.57,
+            "networkAvgSales": 3.07,
+            "relZScore": -3.5709
+          }
+        ],
+        "2026-04-15": [
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10083",
+            "itemName": "Fresh Milk 1L",
+            "storeAvgSales": 6.43,
+            "networkAvgSales": 8.12,
+            "relZScore": -4.0519
+          }
+        ],
+        "2026-04-18": [
+          {
+            "categoryId": "BR1007700",
+            "categoryName": "DAIRY LONG LIFE",
+            "itemId": "ITM10072",
+            "itemName": "UHT Cream 200ml",
+            "storeAvgSales": 5.0,
+            "networkAvgSales": 5.12,
+            "relZScore": -4.2251
+          }
+        ],
+        "2026-04-22": [
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100273",
+            "itemName": "Red Bull 250ml",
+            "storeAvgSales": 7.86,
+            "networkAvgSales": 8.81,
+            "relZScore": -4.644
+          },
+          {
+            "categoryId": "BR10022000",
+            "categoryName": "PACKAGED CONFECTIONERY",
+            "itemId": "ITM100222",
+            "itemName": "KitKat 4F",
+            "storeAvgSales": 4.29,
+            "networkAvgSales": 5.47,
+            "relZScore": -3.4804
+          }
+        ],
+        "2026-04-28": [
+          {
+            "categoryId": "BR10011000",
+            "categoryName": "EGGS",
+            "itemId": "ITM100103",
+            "itemName": "Quail Eggs 20pcs",
+            "storeAvgSales": 4.43,
+            "networkAvgSales": 5.44,
+            "relZScore": -4.1395
+          }
+        ]
+      }
+    },
+    "ST1013": {
+      "storeId": "ST1013",
+      "storeName": "Bravo Zirə",
+      "riskTier": "LOW",
+      "totalAnomalies": 14,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-18",
+        "2026-04-19",
+        "2026-04-24",
+        "2026-04-26",
+        "2026-04-29"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10063",
+            "itemName": "Eco Bag",
+            "storeAvgSales": 4.0,
+            "networkAvgSales": 3.0,
+            "relZScore": -10.2638
+          },
+          {
+            "categoryId": "BR1009900",
+            "categoryName": "DELIKATESSEN",
+            "itemId": "ITM10092",
+            "itemName": "Ham Slice 200g",
+            "storeAvgSales": 3.67,
+            "networkAvgSales": 2.88,
+            "relZScore": -6.8391
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10024200",
+            "categoryName": "PERSONAL CARE & COSMETICS",
+            "itemId": "ITM100241",
+            "itemName": "Head&Shoulders",
+            "storeAvgSales": 4.25,
+            "networkAvgSales": 3.0,
+            "relZScore": -6.8919
+          },
+          {
+            "categoryId": "BR10029700",
+            "categoryName": "TOBACCO PRODUCTS",
+            "itemId": "ITM100291",
+            "itemName": "Marlboro Red",
+            "storeAvgSales": 3.0,
+            "networkAvgSales": 3.12,
+            "relZScore": -5.1504
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR10028600",
+            "categoryName": "TEXTILE",
+            "itemId": "ITM100281",
+            "itemName": "Beach Towel",
+            "storeAvgSales": 3.2,
+            "networkAvgSales": 4.07,
+            "relZScore": -4.7058
+          },
+          {
+            "categoryId": "BR10013200",
+            "categoryName": "FOOD CUPBOARD - SAVOURY",
+            "itemId": "ITM100132",
+            "itemName": "Hellmann Mayo",
+            "storeAvgSales": 6.0,
+            "networkAvgSales": 5.94,
+            "relZScore": -4.2795
+          }
+        ],
+        "2026-04-13": [
+          {
+            "categoryId": "BR10020900",
+            "categoryName": "MO TEXTILE",
+            "itemId": "ITM100201",
+            "itemName": "Cotton Socks 3p",
+            "storeAvgSales": 3.0,
+            "networkAvgSales": 3.13,
+            "relZScore": -3.452
+          }
+        ],
+        "2026-04-14": [
+          {
+            "categoryId": "BR1004400",
+            "categoryName": "BULK CONFECTIONERY",
+            "itemId": "ITM10041",
+            "itemName": "Bulk Gummy Bears",
+            "storeAvgSales": 3.14,
+            "networkAvgSales": 4.27,
+            "relZScore": -5.551
+          }
+        ],
+        "2026-04-18": [
+          {
+            "categoryId": "BR10012100",
+            "categoryName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+            "itemId": "ITM100121",
+            "itemName": "Nescafe Classic",
+            "storeAvgSales": 8.14,
+            "networkAvgSales": 7.0,
+            "relZScore": -4.0813
+          }
+        ],
+        "2026-04-19": [
+          {
+            "categoryId": "BR10018700",
+            "categoryName": "LIGHT HOUSE HOLD",
+            "itemId": "ITM100182",
+            "itemName": "Foil Roll",
+            "storeAvgSales": 2.71,
+            "networkAvgSales": 3.06,
+            "relZScore": -3.9599
+          }
+        ],
+        "2026-04-24": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100152",
+            "itemName": "Apple 1kg",
+            "storeAvgSales": 4.86,
+            "networkAvgSales": 5.56,
+            "relZScore": -4.8579
+          },
+          {
+            "categoryId": "BR10012100",
+            "categoryName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+            "itemId": "ITM100123",
+            "itemName": "Quaker Oats 500g",
+            "storeAvgSales": 7.29,
+            "networkAvgSales": 7.12,
+            "relZScore": -4.8013
+          }
+        ],
+        "2026-04-26": [
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100302",
+            "itemName": "Cucumber 1kg",
+            "storeAvgSales": 7.86,
+            "networkAvgSales": 8.25,
+            "relZScore": -4.1213
+          }
+        ],
+        "2026-04-29": [
+          {
+            "categoryId": "BR1007700",
+            "categoryName": "DAIRY LONG LIFE",
+            "itemId": "ITM10073",
+            "itemName": "Parmalat Milk 0.5L",
+            "storeAvgSales": 5.14,
+            "networkAvgSales": 5.69,
+            "relZScore": -3.7229
+          }
+        ]
+      }
+    },
+    "ST1014": {
+      "storeId": "ST1014",
+      "storeName": "Bravo Buzovna",
+      "riskTier": "HIGH",
+      "totalAnomalies": 11,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-09",
+        "2026-04-12",
+        "2026-04-19",
+        "2026-04-21",
+        "2026-04-24",
+        "2026-04-25",
+        "2026-04-27"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR10014300",
+            "categoryName": "FROZEN FOOD",
+            "itemId": "ITM100141",
+            "itemName": "McCain Fries 750g",
+            "storeAvgSales": 5.0,
+            "networkAvgSales": 2.67,
+            "relZScore": -6.1245
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10028600",
+            "categoryName": "TEXTILE",
+            "itemId": "ITM100282",
+            "itemName": "Bed Sheet Set",
+            "storeAvgSales": 4.5,
+            "networkAvgSales": 3.44,
+            "relZScore": -3.9386
+          },
+          {
+            "categoryId": "BR1002200",
+            "categoryName": "BABY PRODUCTS",
+            "itemId": "ITM10023",
+            "itemName": "Johnson Baby Shampoo",
+            "storeAvgSales": 4.67,
+            "networkAvgSales": 2.8,
+            "relZScore": -3.667
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR10012100",
+            "categoryName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+            "itemId": "ITM100121",
+            "itemName": "Nescafe Classic",
+            "storeAvgSales": 9.0,
+            "networkAvgSales": 8.62,
+            "relZScore": -4.041
+          }
+        ],
+        "2026-04-09": [
+          {
+            "categoryId": "BR1002200",
+            "categoryName": "BABY PRODUCTS",
+            "itemId": "ITM10021",
+            "itemName": "Pampers Diapers S3",
+            "storeAvgSales": 4.29,
+            "networkAvgSales": 3.53,
+            "relZScore": -3.4232
+          }
+        ],
+        "2026-04-12": [
+          {
+            "categoryId": "BR10031900",
+            "categoryName": "FRESH & SMOKED FISH",
+            "itemId": "ITM100312",
+            "itemName": "Smoked Trout",
+            "storeAvgSales": 4.57,
+            "networkAvgSales": 2.87,
+            "relZScore": -5.692
+          }
+        ],
+        "2026-04-19": [
+          {
+            "categoryId": "BR10031900",
+            "categoryName": "FRESH & SMOKED FISH",
+            "itemId": "ITM100313",
+            "itemName": "Tuna Can 185g",
+            "storeAvgSales": 3.29,
+            "networkAvgSales": 3.5,
+            "relZScore": -4.189
+          }
+        ],
+        "2026-04-21": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100151",
+            "itemName": "Banana 1kg",
+            "storeAvgSales": 5.71,
+            "networkAvgSales": 4.94,
+            "relZScore": -5.1606
+          }
+        ],
+        "2026-04-24": [
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10083",
+            "itemName": "Fresh Milk 1L",
+            "storeAvgSales": 11.14,
+            "networkAvgSales": 6.88,
+            "relZScore": -3.7529
+          }
+        ],
+        "2026-04-25": [
+          {
+            "categoryId": "BR10019800",
+            "categoryName": "MEAT & POULTRY",
+            "itemId": "ITM100191",
+            "itemName": "Chicken Fillet 1kg",
+            "storeAvgSales": 11.0,
+            "networkAvgSales": 7.25,
+            "relZScore": -4.3236
+          }
+        ],
+        "2026-04-27": [
+          {
+            "categoryId": "BR10020900",
+            "categoryName": "MO TEXTILE",
+            "itemId": "ITM100202",
+            "itemName": "Underwear Set",
+            "storeAvgSales": 4.57,
+            "networkAvgSales": 3.44,
+            "relZScore": -5.8278
+          }
+        ]
+      }
+    },
+    "ST1015": {
+      "storeId": "ST1015",
+      "storeName": "Bravo Şüvəlan",
+      "riskTier": "LOW",
+      "totalAnomalies": 14,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-11",
+        "2026-04-14",
+        "2026-04-16",
+        "2026-04-18",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-25"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR10018700",
+            "categoryName": "LIGHT HOUSE HOLD",
+            "itemId": "ITM100182",
+            "itemName": "Foil Roll",
+            "storeAvgSales": 2.33,
+            "networkAvgSales": 3.06,
+            "relZScore": -20.2073
+          },
+          {
+            "categoryId": "BR10031900",
+            "categoryName": "FRESH & SMOKED FISH",
+            "itemId": "ITM100313",
+            "itemName": "Tuna Can 185g",
+            "storeAvgSales": 2.33,
+            "networkAvgSales": 3.5,
+            "relZScore": -10.5557
+          },
+          {
+            "categoryId": "BR10030800",
+            "categoryName": "VEGETABLES & GREENS",
+            "itemId": "ITM100302",
+            "itemName": "Cucumber 1kg",
+            "storeAvgSales": 7.33,
+            "networkAvgSales": 7.62,
+            "relZScore": -4.0679
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10083",
+            "itemName": "Fresh Milk 1L",
+            "storeAvgSales": 6.75,
+            "networkAvgSales": 6.62,
+            "relZScore": -6.2497
+          },
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100161",
+            "itemName": "Ariel Powder 3kg",
+            "storeAvgSales": 2.5,
+            "networkAvgSales": 3.14,
+            "relZScore": -4.4429
+          },
+          {
+            "categoryId": "BR1009900",
+            "categoryName": "DELIKATESSEN",
+            "itemId": "ITM10093",
+            "itemName": "Salami 150g",
+            "storeAvgSales": 2.67,
+            "networkAvgSales": 2.58,
+            "relZScore": -3.4101
+          }
+        ],
+        "2026-04-11": [
+          {
+            "categoryId": "BR1007700",
+            "categoryName": "DAIRY LONG LIFE",
+            "itemId": "ITM10071",
+            "itemName": "Parmalat Milk 1L",
+            "storeAvgSales": 5.43,
+            "networkAvgSales": 5.5,
+            "relZScore": -3.7722
+          },
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10032",
+            "itemName": "White Bread 500g",
+            "storeAvgSales": 6.71,
+            "networkAvgSales": 9.69,
+            "relZScore": -3.6321
+          }
+        ],
+        "2026-04-14": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10063",
+            "itemName": "Eco Bag",
+            "storeAvgSales": 3.57,
+            "networkAvgSales": 3.4,
+            "relZScore": -3.7771
+          }
+        ],
+        "2026-04-16": [
+          {
+            "categoryId": "BR1001100",
+            "categoryName": "ALCOHOL PRODUCT",
+            "itemId": "ITM10012",
+            "itemName": "Xan Wine Red 0.75L",
+            "storeAvgSales": 2.71,
+            "networkAvgSales": 4.29,
+            "relZScore": -3.5488
+          }
+        ],
+        "2026-04-18": [
+          {
+            "categoryId": "BR10018700",
+            "categoryName": "LIGHT HOUSE HOLD",
+            "itemId": "ITM100183",
+            "itemName": "Cling Film",
+            "storeAvgSales": 3.14,
+            "networkAvgSales": 3.25,
+            "relZScore": -3.6388
+          }
+        ],
+        "2026-04-23": [
+          {
+            "categoryId": "BR1001100",
+            "categoryName": "ALCOHOL PRODUCT",
+            "itemId": "ITM10013",
+            "itemName": "Efes Beer 0.5L",
+            "storeAvgSales": 4.0,
+            "networkAvgSales": 3.43,
+            "relZScore": -3.4382
+          }
+        ],
+        "2026-04-24": [
+          {
+            "categoryId": "BR10022000",
+            "categoryName": "PACKAGED CONFECTIONERY",
+            "itemId": "ITM100223",
+            "itemName": "Milka 100g",
+            "storeAvgSales": 5.0,
+            "networkAvgSales": 4.81,
+            "relZScore": -4.441
+          }
+        ],
+        "2026-04-25": [
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100162",
+            "itemName": "Fairy Liquid",
+            "storeAvgSales": 2.71,
+            "networkAvgSales": 3.81,
+            "relZScore": -3.9683
+          }
+        ]
+      }
+    },
+    "ST1016": {
+      "storeId": "ST1016",
+      "storeName": "Bravo 20-ci sahə",
+      "riskTier": "LOW",
+      "totalAnomalies": 14,
+      "anomalousDates": [
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-04-11",
+        "2026-04-14",
+        "2026-04-17",
+        "2026-04-19",
+        "2026-04-20",
+        "2026-04-22",
+        "2026-04-25",
+        "2026-04-29"
+      ],
+      "anomaliesByDate": {
+        "2026-04-04": [
+          {
+            "categoryId": "BR1008800",
+            "categoryName": "DAIRY SHORT LIFE",
+            "itemId": "ITM10082",
+            "itemName": "Activia Yogurt",
+            "storeAvgSales": 10.0,
+            "networkAvgSales": 7.62,
+            "relZScore": -4.6231
+          }
+        ],
+        "2026-04-05": [
+          {
+            "categoryId": "BR10020900",
+            "categoryName": "MO TEXTILE",
+            "itemId": "ITM100203",
+            "itemName": "Sports Towel",
+            "storeAvgSales": 4.5,
+            "networkAvgSales": 2.56,
+            "relZScore": -4.412
+          },
+          {
+            "categoryId": "BR10018700",
+            "categoryName": "LIGHT HOUSE HOLD",
+            "itemId": "ITM100182",
+            "itemName": "Foil Roll",
+            "storeAvgSales": 3.0,
+            "networkAvgSales": 2.47,
+            "relZScore": -3.4132
+          }
+        ],
+        "2026-04-06": [
+          {
+            "categoryId": "BR10023100",
+            "categoryName": "PASTRY",
+            "itemId": "ITM100233",
+            "itemName": "Donut Sugar",
+            "storeAvgSales": 6.6,
+            "networkAvgSales": 5.44,
+            "relZScore": -4.0882
+          }
+        ],
+        "2026-04-11": [
+          {
+            "categoryId": "BR1001100",
+            "categoryName": "ALCOHOL PRODUCT",
+            "itemId": "ITM10012",
+            "itemName": "Xan Wine Red 0.75L",
+            "storeAvgSales": 3.14,
+            "networkAvgSales": 2.93,
+            "relZScore": -3.9943
+          }
+        ],
+        "2026-04-14": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100151",
+            "itemName": "Banana 1kg",
+            "storeAvgSales": 6.14,
+            "networkAvgSales": 4.5,
+            "relZScore": -7.2904
+          },
+          {
+            "categoryId": "BR1005500",
+            "categoryName": "CRISPS AND SNACKS",
+            "itemId": "ITM10052",
+            "itemName": "Pringles Original",
+            "storeAvgSales": 6.57,
+            "networkAvgSales": 4.88,
+            "relZScore": -3.458
+          }
+        ],
+        "2026-04-17": [
+          {
+            "categoryId": "BR1003300",
+            "categoryName": "BAKERY",
+            "itemId": "ITM10032",
+            "itemName": "White Bread 500g",
+            "storeAvgSales": 12.57,
+            "networkAvgSales": 9.12,
+            "relZScore": -4.089
+          }
+        ],
+        "2026-04-19": [
+          {
+            "categoryId": "BR10016500",
+            "categoryName": "HEAVY HOUSEHOLD",
+            "itemId": "ITM100162",
+            "itemName": "Fairy Liquid",
+            "storeAvgSales": 3.43,
+            "networkAvgSales": 3.4,
+            "relZScore": -5.4823
+          },
+          {
+            "categoryId": "BR1009900",
+            "categoryName": "DELIKATESSEN",
+            "itemId": "ITM10093",
+            "itemName": "Salami 150g",
+            "storeAvgSales": 4.0,
+            "networkAvgSales": 3.07,
+            "relZScore": -3.9124
+          }
+        ],
+        "2026-04-20": [
+          {
+            "categoryId": "BR10027500",
+            "categoryName": "SOFT DRINKS",
+            "itemId": "ITM100272",
+            "itemName": "Pepsi 1.5L",
+            "storeAvgSales": 10.86,
+            "networkAvgSales": 7.69,
+            "relZScore": -3.8601
+          }
+        ],
+        "2026-04-22": [
+          {
+            "categoryId": "BR1006600",
+            "categoryName": "CUSTOMER BAG",
+            "itemId": "ITM10061",
+            "itemName": "Plastic Bag Small",
+            "storeAvgSales": 3.57,
+            "networkAvgSales": 3.69,
+            "relZScore": -4.2701
+          }
+        ],
+        "2026-04-25": [
+          {
+            "categoryId": "BR10012100",
+            "categoryName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+            "itemId": "ITM100123",
+            "itemName": "Quaker Oats 500g",
+            "storeAvgSales": 9.86,
+            "networkAvgSales": 7.38,
+            "relZScore": -3.6115
+          }
+        ],
+        "2026-04-29": [
+          {
+            "categoryId": "BR10015400",
+            "categoryName": "FRUITS & NUTS & FRESH JUICE",
+            "itemId": "ITM100153",
+            "itemName": "Orange Juice 1L",
+            "storeAvgSales": 7.0,
+            "networkAvgSales": 5.69,
+            "relZScore": -3.8167
+          }
+        ]
+      }
+    }
+  }
+}

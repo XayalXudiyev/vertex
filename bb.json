@@ -1,0 +1,573 @@
+{
+  "meta": {
+    "description": "Basket-level anomalies detected via FP-Growth Global vs Local Lift",
+    "dateRange": "2024-04-01 to 2024-04-30",
+    "totalStores": 16,
+    "relationalKey": "categoryId — join to Item-level JSON on categoryId",
+    "note": "Basket anomalies represent the full April period, not a single date. Use anomalousDates from Item-level JSON to correlate.",
+    "totalAnomalies": 30
+  },
+  "stores": {
+    "ST1001": {
+      "storeId": "ST1001",
+      "storeName": "Bravo Svetlana Məmmədova küç.",
+      "riskTier": "MEDIUM",
+      "basketAnomalyCount": 2,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-09",
+        "2024-04-10",
+        "2024-04-15",
+        "2024-04-22",
+        "2024-04-23",
+        "2024-04-26"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR10027500",
+          "catAName": "SOFT DRINKS",
+          "catBId": "BR1003300",
+          "catBName": "BAKERY",
+          "globalLift": 0.4172,
+          "localLift": 0.3441,
+          "gap": -0.1752
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10019800",
+          "catBName": "MEAT & POULTRY",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1002": {
+      "storeId": "ST1002",
+      "storeName": "Bravo Koroğlu m/s",
+      "riskTier": "LOW",
+      "basketAnomalyCount": 1,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-08",
+        "2024-04-10",
+        "2024-04-11",
+        "2024-04-14",
+        "2024-04-20",
+        "2024-04-21",
+        "2024-04-23",
+        "2024-04-27"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR10019800",
+          "catAName": "MEAT & POULTRY",
+          "catBId": "BR1003300",
+          "catBName": "BAKERY",
+          "globalLift": 0.4104,
+          "localLift": 0.3234,
+          "gap": -0.212
+        }
+      ]
+    },
+    "ST1003": {
+      "storeId": "ST1003",
+      "storeName": "Bravo Nəsib bəy Yusifbəyli küç.",
+      "riskTier": "MEDIUM",
+      "basketAnomalyCount": 2,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-08",
+        "2024-04-14",
+        "2024-04-25"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR10012100",
+          "catAName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+          "catBId": "BR1003300",
+          "catBName": "BAKERY",
+          "globalLift": 0.4143,
+          "localLift": 0.292,
+          "gap": -0.2952
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10011000",
+          "catBName": "EGGS",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1004": {
+      "storeId": "ST1004",
+      "storeName": "Bravo Hövsan",
+      "riskTier": "HIGH",
+      "basketAnomalyCount": 5,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-07",
+        "2024-04-11",
+        "2024-04-24",
+        "2024-04-25",
+        "2024-04-30"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10011000",
+          "catBName": "EGGS",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10012100",
+          "catBName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10027500",
+          "catBName": "SOFT DRINKS",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10030800",
+          "catBName": "VEGETABLES & GREENS",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR1003300",
+          "catBName": "BAKERY",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1005": {
+      "storeId": "ST1005",
+      "storeName": "Bravo Lökbatan",
+      "riskTier": "LOW",
+      "basketAnomalyCount": 0,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-07",
+        "2024-04-12",
+        "2024-04-19",
+        "2024-04-22"
+      ],
+      "basketAnomalyPairs": []
+    },
+    "ST1006": {
+      "storeId": "ST1006",
+      "storeName": "Bravo Sumqayıt Dəmiryol st.",
+      "riskTier": "MEDIUM",
+      "basketAnomalyCount": 2,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-14",
+        "2024-04-15",
+        "2024-04-18",
+        "2024-04-21",
+        "2024-04-25"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10012100",
+          "catBName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10013200",
+          "catBName": "FOOD CUPBOARD - SAVOURY",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1007": {
+      "storeId": "ST1007",
+      "storeName": "Bravo Xırdalan -2",
+      "riskTier": "LOW",
+      "basketAnomalyCount": 1,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-08",
+        "2024-04-11",
+        "2024-04-15",
+        "2024-04-17",
+        "2024-04-18",
+        "2024-04-23",
+        "2024-04-26",
+        "2024-04-27"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10012100",
+          "catBName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1008": {
+      "storeId": "ST1008",
+      "storeName": "Bravo Sabunçu",
+      "riskTier": "HIGH",
+      "basketAnomalyCount": 5,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-11",
+        "2024-04-20",
+        "2024-04-22",
+        "2024-04-23",
+        "2024-04-26"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10012100",
+          "catBName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10019800",
+          "catBName": "MEAT & POULTRY",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR1003300",
+          "catBName": "BAKERY",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR1008800",
+          "catBName": "DAIRY SHORT LIFE",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR10011000",
+          "catAName": "EGGS",
+          "catBId": "BR10012100",
+          "catBName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1009": {
+      "storeId": "ST1009",
+      "storeName": "Bravo Mərdəkan şossesi",
+      "riskTier": "LOW",
+      "basketAnomalyCount": 0,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-09",
+        "2024-04-13",
+        "2024-04-24",
+        "2024-04-30"
+      ],
+      "basketAnomalyPairs": []
+    },
+    "ST1010": {
+      "storeId": "ST1010",
+      "storeName": "Bravo 8 Noyabr pr.",
+      "riskTier": "MEDIUM",
+      "basketAnomalyCount": 2,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-11",
+        "2024-04-15",
+        "2024-04-24",
+        "2024-04-29"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10015400",
+          "catBName": "FRUITS & NUTS & FRESH JUICE",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10019800",
+          "catBName": "MEAT & POULTRY",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1011": {
+      "storeId": "ST1011",
+      "storeName": "Bravo Gəncə pr.",
+      "riskTier": "LOW",
+      "basketAnomalyCount": 1,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-10",
+        "2024-04-14",
+        "2024-04-23",
+        "2024-04-29"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10011000",
+          "catBName": "EGGS",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1012": {
+      "storeId": "ST1012",
+      "storeName": "Bravo- City Park Mall",
+      "riskTier": "HIGH",
+      "basketAnomalyCount": 4,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-12",
+        "2024-04-14",
+        "2024-04-15",
+        "2024-04-18",
+        "2024-04-22",
+        "2024-04-28"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10012100",
+          "catBName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10015400",
+          "catBName": "FRUITS & NUTS & FRESH JUICE",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10019800",
+          "catBName": "MEAT & POULTRY",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR1002200",
+          "catBName": "BABY PRODUCTS",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1013": {
+      "storeId": "ST1013",
+      "storeName": "Bravo Zirə",
+      "riskTier": "LOW",
+      "basketAnomalyCount": 0,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-13",
+        "2024-04-14",
+        "2024-04-18",
+        "2024-04-19",
+        "2024-04-24",
+        "2024-04-26",
+        "2024-04-29"
+      ],
+      "basketAnomalyPairs": []
+    },
+    "ST1014": {
+      "storeId": "ST1014",
+      "storeName": "Bravo Buzovna",
+      "riskTier": "HIGH",
+      "basketAnomalyCount": 4,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-09",
+        "2024-04-12",
+        "2024-04-19",
+        "2024-04-21",
+        "2024-04-24",
+        "2024-04-25",
+        "2024-04-27"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10014300",
+          "catBName": "FROZEN FOOD",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10019800",
+          "catBName": "MEAT & POULTRY",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10027500",
+          "catBName": "SOFT DRINKS",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        },
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR1003300",
+          "catBName": "BAKERY",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1015": {
+      "storeId": "ST1015",
+      "storeName": "Bravo Şüvəlan",
+      "riskTier": "LOW",
+      "basketAnomalyCount": 1,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-11",
+        "2024-04-14",
+        "2024-04-16",
+        "2024-04-18",
+        "2024-04-23",
+        "2024-04-24",
+        "2024-04-25"
+      ],
+      "basketAnomalyPairs": [
+        {
+          "catAId": "BR1001100",
+          "catAName": "ALCOHOL PRODUCT",
+          "catBId": "BR10012100",
+          "catBName": "FOOD CUPBOARD - HOT BEVERAGES & BREAKFAST",
+          "globalLift": null,
+          "localLift": null,
+          "gap": -0.55
+        }
+      ]
+    },
+    "ST1016": {
+      "storeId": "ST1016",
+      "storeName": "Bravo 20-ci sahə",
+      "riskTier": "LOW",
+      "basketAnomalyCount": 0,
+      "itemAnomalousDates": [
+        "2024-04-04",
+        "2024-04-05",
+        "2024-04-06",
+        "2024-04-11",
+        "2024-04-14",
+        "2024-04-17",
+        "2024-04-19",
+        "2024-04-20",
+        "2024-04-22",
+        "2024-04-25",
+        "2024-04-29"
+      ],
+      "basketAnomalyPairs": []
+    }
+  }
+}
