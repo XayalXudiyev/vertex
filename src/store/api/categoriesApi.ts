@@ -46,7 +46,7 @@ export interface CategoriesResponse {
 export const categoriesApi = createApi({
   reducerPath: "categoriesApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://3.127.221.126:8080/api",
+    baseUrl: "/api/proxy",
   }),
   tagTypes: ["Category"],
   endpoints: (builder) => ({

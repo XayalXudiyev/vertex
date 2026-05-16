@@ -18,7 +18,7 @@ export interface TaskPayload {
 export const tasksApi = createApi({
   reducerPath: "tasksApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://3.127.221.126:8080/api",
+    baseUrl: "/api/proxy",
   }),
   tagTypes: ["Task"],
   endpoints: (builder) => ({
